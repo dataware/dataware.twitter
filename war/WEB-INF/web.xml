@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	
+	<servlet>
+		<servlet-name>App</servlet-name>
+		<servlet-class>dataware.twitter.servlets.InterfaceServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>App</servlet-name>
+		<url-pattern>/app</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Uninstall</servlet-name>
+		<servlet-class>dataware.twitter.servlets.UninstallServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Uninstall</servlet-name>
+		<url-pattern>/uninstall</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Authorize</servlet-name>
+		<servlet-class>dataware.twitter.servlets.AuthorizeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Authorize</servlet-name>
+		<url-pattern>/authorize</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>RetrieveUpdate</servlet-name>
+		<servlet-class>dataware.twitter.servlets.RetrieveUpdateServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RetrieveUpdate</servlet-name>
+		<url-pattern>/retrieveUpdate</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+    	<servlet-name>chat</servlet-name>
+    	<servlet-class>dataware.twitter.servlets.ConnectServlet</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>chat</servlet-name>
+    	<url-pattern>/_ah/xmpp/message/chat/</url-pattern>
+  	</servlet-mapping>
+  		
+</web-app>
